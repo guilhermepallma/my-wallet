@@ -1,8 +1,6 @@
-import USER_EMAIL from './actionTypes';
+export const USER_EMAIL = 'USER_EMAIL';
 
-export const emailAction = (email) => ({
+export const addEmailAction = (email) => ({
   type: USER_EMAIL,
   email,
 });
-
-export default emailAction;
