@@ -66,6 +66,7 @@ class Login extends React.Component {
         />
         <button
           type="button"
+          name="Entrar"
           disabled={ button }
           onClick={ this.sendToGlobalState }
         >
