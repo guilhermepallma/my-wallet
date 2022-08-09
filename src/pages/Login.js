@@ -78,8 +78,7 @@ class Login extends React.Component {
 }
 Login.propTypes = {
   submitEmail: PropTypes.func.isRequired,
-  push: PropTypes.func.isRequired,
-  history: PropTypes.shape().isRequired,
+  history: PropTypes.shape({ push: PropTypes.func }).isRequired,
 };
 
 const mapDispatchToProps = (dispatch) => ({
