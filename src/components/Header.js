@@ -11,7 +11,7 @@ class Header extends React.Component {
           <p data-testid="email-field">{userEmail}</p>
           <p data-testid="total-field">
             {
-              wallet.expenses.length <= 0 ? 0 : wallet.expenses.reduce((acc, curr) => acc
+              wallet.expenses.reduce((acc, curr) => acc
                 + (curr.value * curr.exchangeRates[curr.currency].ask), 0).toFixed(2)
             }
           </p>

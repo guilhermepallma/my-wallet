@@ -2,6 +2,7 @@ export const USER_EMAIL = 'USER_EMAIL';
 export const WALLET_CURRENCIES = 'WALLET_CURRENCIES';
 export const ADD_EXPENSE = 'ADD_EXPENSE';
 export const ADD_EXCHANGE_RATES = 'ADD_EXCHANGE_RATES';
+export const DELETE_EXPENSE = 'DELETE_EXPENSE';
 
 export const addEmailAction = (email) => ({
   type: USER_EMAIL,
@@ -16,6 +17,11 @@ export const getCurrenciesAction = (currencies) => ({
 export const saveExpense = (expense) => ({
   type: ADD_EXPENSE,
   expense,
+});
+
+export const deleteExpense = (id) => ({
+  type: DELETE_EXPENSE,
+  id,
 });
 
 export function fetchCurrencies() {

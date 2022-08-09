@@ -17,6 +17,12 @@ const wallet = (state = INITIAL_STATE, action) => {
       ...state,
       expenses: [...state.expenses, action.expense],
     };
+  case 'DELETE_EXPENSE':
+    return {
+      // https://stackoverflow.com/questions/57519905/how-delete-item-from-redux-state.
+      ...state,
+      expenses: state.expenses.filter(({ id }) => id !== action.id),
+    };
   default:
     return state;
   }
